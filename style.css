@@ -1,0 +1,48 @@
+ :root {
+     --cor-fundo-principal: #f4f8f8;
+     --cor-fundo-cartao: #ffffff;
+     --cor-texto-principal: #112229;
+     --cor-texto-suave: #3a525c;
+     --cor-primaria: #1b5e68;
+     --cor-primaria-hover: #12434b;
+     --cor-destaque-respiracao: #3d998d;
+     --cor-alerta: #c9302c;
+     --cor-alerta-hover: #9f221f;
+     --raio-borda: 16px;
+     --contorno-foco: 4px solid #112229;
+     --sombra: 0 4px 15px rgba(0, 0, 0, 0.08);
+ }
+
+ /* Suporte para Alto Contraste para quem tem visão reduzida */
+ @media (prefers-contrast: more) {
+     :root {
+         --cor-fundo-principal: #ffffff;
+         --cor-fundo-cartao: #ffffff;
+         --cor-texto-principal: #000000;
+         --cor-texto-suave: #000000;
+         --cor-primaria: #003644;
+         --cor-destaque-respiracao: #005244;
+         --cor-alerta: #900000;
+         --raio-borda: 8px;
+     }
+
+     .cartao,
+     .botao-emergencia,
+     .banner-destaque,
+     .cartao-dica {
+         border: 3px solid #000000 !important;
+     }
+ }
+
+ /* Redução de Movimento (Acessibilidade para sensibilidade visual) */
+ @media (prefers-reduced-motion: reduce) {
+
+     *,
+     ::before,
+     ::after {
+         animation-duration: 0.01ms !important;
+         animation-iteration-count: 1 !important;
+         transition-duration: 0.01ms !important;
+         scroll-behavior: auto !important;
+     }
+ }
